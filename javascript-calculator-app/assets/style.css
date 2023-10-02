@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0F172A;
+}
+
+.container {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  padding: 10px 20px 20px;
+  background: #808080;
+  box-shadow: 10px 10px #606060;
+  border: 2px solid black;
+  transition: background 1.8s;
+}
+
+.display {
+  text-align: right;
+  background-color: #fff;
+  padding: 0 8px 0 8px;
+  box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.3) inset;
+  height: 60px;
+  width: 255px;
+  outline: none;
+  border: 2px solid black;
+  color: #000;
+  pointer-events: none;
+  border-radius: 6px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  transition: 0.8s, background 1.8s;
+  font-size: 1.7rem;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  width: 3.5rem;
+    height: 3.5rem;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid black;
+
+  transition: 0.08s;
+  box-shadow: 0 2px 0 1px #808080 inset;
+  font-size: 18px;
+}
+
+.buttons button:hover {
+    background-color: #E0E0E0;
+    filter: brightness(0.9);
+}
+
+.buttons button:active {
+    transition: 0.08s;
+    box-shadow: 0 2px 0 1px #555 inset;
+    font-size: 18px;
+}
+
+#num {
+  transition: 0.08s;
+  background-color: #e5e4e2;
+  box-shadow: 0 4px 0 1px #555;
+}
+
+#num:active, #num.active{
+  transition: 0.08s;
+  box-shadow: 0 2px 0 1px #555 inset;
+  font-size: 18px;
+}
+
+#operator {
+  background-color: #ffb347;
+  box-shadow: 0 4px 0 1px #a87022;
+}
+#operator:active, #operator.active {
+  transition: 0.08s;
+  box-shadow: 0 2px 0 1px #a87022 inset;
+  font-size: 18px;
+}
+
+#del {
+  transition: 0.08s;
+  background-color: #f08080;
+  box-shadow: 0 4px 0 1px #822c27;
+}
+#del:active, #del.active{
+  transition: 0.08s;
+  box-shadow: 0 2px 0 1px #822c27 inset;
+  font-size: 18px;
+}
+
+#equ {
+  transition: 0.08s;
+  background-color: #77dd77;
+  box-shadow: 0 4px 0 1px #428742;
+}
+#equ:active, #equ.active{
+  transition: 0.08s;
+  box-shadow: 0 2px 0 1px #428742 inset;
+  font-size: 18px;
+}
+
+/* Judul */
+.title {
+  position: fixed;
+  margin-left: auto;
+  top: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+/* Tombol Back */
+.back-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
